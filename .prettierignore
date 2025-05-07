@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+coverage
+*.log
+*.lock
+*.tmp
+*.cache
+*.env
+*.local
+*.DS_Store
+*.swp
+*.swo
+*.swn
