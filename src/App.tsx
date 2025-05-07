@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import classes from './App.module.css';
+import btnClasses from './styles/button.module.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+   const btnBprimary = `${btnClasses.btn} ${btnClasses['btn-md']} ${btnClasses['btn-primary']}`;
+   const btnBsecondary = `${btnClasses.btn} ${btnClasses['btn-md']} ${btnClasses['btn-secondary']}`;
+   const btnBdanger = `${btnClasses.btn} ${btnClasses['btn-md']} ${btnClasses['btn-danger']}`;
+   const btnBoutlinePrimary = `${btnClasses.btn} ${btnClasses['btn-md']} ${btnClasses['btn-outline-primary']}`;
+   const btnBgradient = `${btnClasses.btn} ${btnClasses['btn-md']} ${btnClasses['btn-gradient']}`;
+   return (
+      <main className={classes.main}>
+         <h1>Tailwind is Great!</h1>
+         <button className={btnBprimary}>Primary</button>
+         <button className={btnBsecondary}>
+            Secondary
+         </button>
+         <button className={btnBdanger}>Danger</button>
+         <button className={btnBoutlinePrimary}>
+            Outline
+         </button>
+         <button className={btnBgradient}>Gradient</button>
+      </main>
+   );
 }
-
-export default App
